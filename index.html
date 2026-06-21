@@ -6,10 +6,8 @@
     <meta name="description" content="Celestian Unlock - Servicios profesionales de desbloqueo, reparación y optimización de dispositivos móviles">
     <meta name="theme-color" content="#05000f">
     <title>Celestian Unlock | Servicios de Desbloqueo y Reparación</title>
-    <!-- Fuentes y Códigos de Iconos -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Archivo CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,15 +16,18 @@
     <nav id="navbar" class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <img src="logo2.jpg" alt="Celestian Unlock">
+                <div class="logo-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <span class="logo-text">Celestian</span>
             </div>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="#inicio" class="nav-link">🏠 Inicio</a></li>
                 <li><a href="#servicios" class="nav-link">🛠️ Servicios</a></li>
+                <li><a href="#galeria" class="nav-link">📸 Galería</a></li>
                 <li><a href="#diagnostico" class="nav-link">🔍 Diagnóstico</a></li>
                 <li><a href="#beneficios" class="nav-link">⭐ Beneficios</a></li>
                 <li><a href="#estadisticas" class="nav-link">📊 Estadísticas</a></li>
-                <li><a href="#gerente" class="nav-link">👨‍💼 Gerente</a></li>
                 <li><a href="#contacto" class="nav-link">📞 Contáctanos</a></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
@@ -39,13 +40,13 @@
 
     <!-- Inicio -->
     <section id="inicio" class="hero">
-        <div id="particles-js"></div> <!-- Contenedor de partículas -->
+        <div id="particles-js"></div>
         <div class="hero-content">
             <h1 class="hero-title">Bienvenido a <span class="gradient-text">Celestian Unlock</span></h1>
-            <p class="hero-subtitle">Soluciones avanzadas en bypass, reparación y optimización de dispositivos móviles. Seguridad y rapidez garantizada.</p>
+            <p class="hero-subtitle">Soluciones avanzadas en bypass, reparación y optimización de dispositivos móviles. Con más de 2 años de experiencia, hemos reparado más de 67 dispositivos y contamos con una satisfacción del 95%.</p>
             <div class="hero-buttons">
                 <a href="#diagnostico" class="btn-primary">Solicitar Diagnóstico</a>
-                <a href="https://wa.me/50495823258" target="_blank" class="btn-secondary"><i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp</a>
+                <a href="https://wa.me/50495823258" target="_blank" class="btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -57,129 +58,332 @@
 
     <!-- Servicios -->
     <section id="servicios" class="servicios-section">
-        <h2 class="section-title">Nuestros Servicios</h2>
-        <div class="grid-container">
-            <div class="service-card" data-aos="fade-up">
-                <div class="card-icon">
-                    <i class="fa-solid fa-microscope"></i>
+        <div class="section-header">
+            <h2 class="section-title">Nuestros Servicios Profesionales</h2>
+            <p class="section-subtitle">Soluciones especializadas con garantía total</p>
+        </div>
+        
+        <div class="servicios-grid">
+            <!-- Servicio 1: Diagnóstico -->
+            <div class="service-card-advanced">
+                <div class="service-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-microscope" style="font-size: 80px; color: white; opacity: 0.9;"></i>
                 </div>
-                <h3>Diagnóstico de dispositivos</h3>
-                <p>Análisis profundo de hardware y software para detectar cualquier anomalía.</p>
+                <div class="service-content">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3>Diagnóstico Completo</h3>
+                    <p>Análisis profundo de hardware y software para identificar exactamente qué está fallando en tu dispositivo. Utilizamos herramientas profesionales de última generación.</p>
+                    <ul class="service-details">
+                        <li><i class="fas fa-check"></i> Escaneo total de hardware</li>
+                        <li><i class="fas fa-check"></i> Análisis de software avanzado</li>
+                        <li><i class="fas fa-check"></i> Reporte detallado escrito</li>
+                        <li><i class="fas fa-check"></i> Precio presupuestado sin sorpresas</li>
+                    </ul>
+                    <a href="https://wa.me/50495823258" class="btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contáctanos
+                    </a>
+                </div>
             </div>
-            <div class="service-card" data-aos="fade-up">
-                <div class="card-icon">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
+
+            <!-- Servicio 2: Recuperación de datos -->
+            <div class="service-card-advanced">
+                <div class="service-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-database" style="font-size: 80px; color: white; opacity: 0.9;"></i>
                 </div>
-                <h3>Bypass +A12</h3>
-                <p>Bypass iphone XS/17Pro Max, Desbloqueo rapido y seguro.</p>
+                <div class="service-content">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3>Recuperación de Datos</h3>
+                    <p>Extracción segura de información en dispositivos dañados, mojados o con pantalla rota. Recuperamos fotos, videos, contactos y más con máxima confidencialidad.</p>
+                    <ul class="service-details">
+                        <li><i class="fas fa-check"></i> Extracción de archivos</li>
+                        <li><i class="fas fa-check"></i> Fotos, videos y documentos</li>
+                        <li><i class="fas fa-check"></i> Máxima confidencialidad</li>
+                        <li><i class="fas fa-check"></i> Entrega en USB o nube</li>
+                    </ul>
+                    <a href="https://wa.me/50495823258" class="btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contáctanos
+                    </a>
+                </div>
             </div>
-            <div class="service-card" data-aos="fade-up">
-                <div class="card-icon">
-                    <i class="fa-solid fa-database"></i>
+
+            <!-- Servicio 3: Optimización -->
+            <div class="service-card-advanced">
+                <div class="service-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-sliders" style="font-size: 80px; color: white; opacity: 0.9;"></i>
                 </div>
-                <h3>Recuperación de datos</h3>
-                <p>Extracción autorizada y segura de información en dispositivos dañados.</p>
+                <div class="service-content">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3>Optimización de Sistema</h3>
+                    <p>Flasheo profesional, actualización de sistemas operativos e instalación de software. Mejoramos el rendimiento de tu dispositivo al máximo.</p>
+                    <ul class="service-details">
+                        <li><i class="fas fa-check"></i> Flasheo de ROM profesional</li>
+                        <li><i class="fas fa-check"></i> Actualización a versión nueva</li>
+                        <li><i class="fas fa-check"></i> Limpieza profunda de malware</li>
+                        <li><i class="fas fa-check"></i> Velocidad mejorada garantizada</li>
+                    </ul>
+                    <a href="https://wa.me/50495823258" class="btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contáctanos
+                    </a>
+                </div>
             </div>
-            <div class="service-card" data-aos="fade-up">
-                <div class="card-icon">
-                    <i class="fa-solid fa-sliders"></i>
+
+            <!-- Servicio 4: Mantenimiento -->
+            <div class="service-card-advanced">
+                <div class="service-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-shield-virus" style="font-size: 80px; color: white; opacity: 0.9;"></i>
                 </div>
-                <h3>Desbloqueo de Google</h3>
-                <p>Desbloqueo de Android FRP, Desbloqueo rapido y seguro.</p>
+                <div class="service-content">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Limpieza física y digital de tu dispositivo para prevenir problemas. Evita daños costosos con nuestro programa de cuidado integral.</p>
+                    <ul class="service-details">
+                        <li><i class="fas fa-check"></i> Limpieza física profunda</li>
+                        <li><i class="fas fa-check"></i> Eliminación de virus</li>
+                        <li><i class="fas fa-check"></i> Optimización de batería</li>
+                        <li><i class="fas fa-check"></i> Chequeo preventivo mensual</li>
+                    </ul>
+                    <a href="https://wa.me/50495823258" class="btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contáctanos
+                    </a>
+                </div>
             </div>
-            <div class="service-card" data-aos="fade-up">
-                <div class="card-icon">
-                    <i class="fa-solid fa-shield-virus"></i>
+
+            <!-- Servicio 5: Desbloqueo FRP/Bypass -->
+            <div class="service-card-advanced">
+                <div class="service-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-lock-open" style="font-size: 80px; color: white; opacity: 0.9;"></i>
                 </div>
-                <h3>Desbloqueo de Red</h3>
-                <p>Desbloqueo de red, Iphone/Android, Libera con nosotros ya.</p>
+                <div class="service-content">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lock-open"></i>
+                    </div>
+                    <h3>Desbloqueo FRP/Bypass</h3>
+                    <p>Bypass profesional de bloqueos FRP (Factory Reset Protection) en Samsung, Xiaomi, Redmi y más. Recupera acceso a tu dispositivo de forma segura.</p>
+                    <ul class="service-details">
+                        <li><i class="fas fa-check"></i> Bypass FRP Samsung</li>
+                        <li><i class="fas fa-check"></i> Desbloqueo Xiaomi/Redmi</li>
+                        <li><i class="fas fa-check"></i> Sin dañar el dispositivo</li>
+                        <li><i class="fas fa-check"></i> Acceso completo recuperado</li>
+                    </ul>
+                    <a href="https://wa.me/50495823258" class="btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Servicio 6: Cambio de Pantalla -->
+            <div class="service-card-advanced">
+                <div class="service-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-mobile-screen" style="font-size: 80px; color: white; opacity: 0.9;"></i>
+                </div>
+                <div class="service-content">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-screen"></i>
+                    </div>
+                    <h3>Cambio de Pantalla</h3>
+                    <p>Reemplazo de pantallas rotas, quemadas o con problemas de táctil. Usamos pantallas originales o de alta calidad con garantía.</p>
+                    <ul class="service-details">
+                        <li><i class="fas fa-check"></i> Pantallas iPhone originales</li>
+                        <li><i class="fas fa-check"></i> Pantallas Android de calidad</li>
+                        <li><i class="fas fa-check"></i> Instalación profesional</li>
+                        <li><i class="fas fa-check"></i> Garantía en pantalla nueva</li>
+                    </ul>
+                    <a href="https://wa.me/50495823258" class="btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Trabajos -->
+    <section id="galeria" class="galeria-section">
+        <div class="section-header">
+            <h2 class="section-title">Nuestros Trabajos Realizados</h2>
+            <p class="section-subtitle">Casos exitosos de bypass, reparación y recuperación</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="bypass">Bypass/FRP</button>
+            <button class="filter-btn" data-filter="reparacion">Reparación</button>
+        </div>
+
+        <div class="galeria-grid">
+            <div class="galeria-item" data-filter="bypass">
+                <div class="galeria-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; color: white;">
+                        <i class="fas fa-lock-open" style="font-size: 60px; margin-bottom: 20px;"></i>
+                        <h4>Bypass FRP Samsung</h4>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Desbloqueo exitoso de cuenta Google</p>
+                    </div>
+                </div>
+                <div class="galeria-overlay">
+                    <h4>Bypass FRP Samsung</h4>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-filter="reparacion">
+                <div class="galeria-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; color: white;">
+                        <i class="fas fa-mobile-screen" style="font-size: 60px; margin-bottom: 20px;"></i>
+                        <h4>Cambio de Pantalla</h4>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">iPhone 13 Pro reparado</p>
+                    </div>
+                </div>
+                <div class="galeria-overlay">
+                    <h4>Cambio de Pantalla iPhone</h4>
+                </div>
+            </div>
+
+            <div class="galeria-item" data-filter="bypass">
+                <div class="galeria-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center;">
+                    <div style="text-align: center; color: white;">
+                        <i class="fas fa-database" style="font-size: 60px; margin-bottom: 20px;"></i>
+                        <h4>Recuperación de Datos</h4>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Dispositivo mojado recuperado</p>
+                    </div>
+                </div>
+                <div class="galeria-overlay">
+                    <h4>Recuperación de Datos</h4>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Diagnóstico -->
     <section id="diagnostico" class="diagnostico-section">
-        <h2 class="section-title">Solicitar Diagnóstico</h2>
+        <h2 class="section-title">Solicitar Diagnóstico Gratuito</h2>
+        <p class="section-subtitle">Completa el formulario y te contactaremos en las próximas 24 horas</p>
         <div class="form-container">
             <form id="form-diagnostico">
-                <div class="input-group">
-                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" id="nombre" placeholder="Nombre completo" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="correo" placeholder="Correo electrónico" required>
+                        <span class="input-line"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="dispositivo" placeholder="Marca y modelo del dispositivo" required>
+                        <span class="input-line"></span>
+                    </div>
+                </div>
+                <div class="input-group full-width">
+                    <textarea id="problema" rows="4" placeholder="Describe el problema que tiene tu dispositivo..." required></textarea>
                     <span class="input-line"></span>
                 </div>
-                <div class="input-group">
-                    <input type="email" id="correo" placeholder="Correo electrónico" required>
-                    <span class="input-line"></span>
-                </div>
-                <div class="input-group">
-                    <input type="tel" id="telefono" placeholder="Número de teléfono" required>
-                    <span class="input-line"></span>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="dispositivo" placeholder="Marca y modelo del dispositivo" required>
-                    <span class="input-line"></span>
-                </div>
-                <div class="input-group">
-                    <textarea id="problema" rows="4" placeholder="Descripción detallada del problema..." required></textarea>
-                    <span class="input-line"></span>
-                </div>
-                <button type="submit" class="btn-submit">Enviar a Evaluación</button>
+                <button type="submit" class="btn-submit">Enviar Solicitud de Diagnóstico</button>
             </form>
         </div>
     </section>
 
     <!-- Beneficios -->
     <section id="beneficios" class="beneficios-section">
-        <h2 class="section-title">¿Por qué elegirnos?</h2>
-        <div class="grid-container">
-            <div class="benefit-card" data-aos="fade-up">
+        <div class="section-header">
+            <h2 class="section-title">¿Por qué Elegirnos?</h2>
+            <p class="section-subtitle">Razones para confiar en Celestian Unlock</p>
+        </div>
+        <div class="beneficios-grid">
+            <div class="benefit-card">
                 <div class="card-icon">
                     <i class="fa-solid fa-bolt"></i>
                 </div>
-                <h3>Atención rápida</h3>
-                <p>Minimizamos los tiempos de espera para que recuperes tu dispositivo pronto.</p>
+                <h3>Atención Rápida</h3>
+                <p>Minimizamos tiempos de espera. Reparaciones express disponibles. Servicio rápido sin comprometer calidad.</p>
             </div>
-            <div class="benefit-card" data-aos="fade-up">
+            <div class="benefit-card">
                 <div class="card-icon">
                     <i class="fa-solid fa-user-shield"></i>
                 </div>
-                <h3>Soporte personalizado</h3>
-                <p>Asesoría directa y clara durante todo el proceso de reparación.</p>
+                <h3>Soporte Personalizado</h3>
+                <p>Asesoría directa en cada paso. Un especialista dedicado a tu caso. Seguimiento constante del trabajo.</p>
             </div>
-            <div class="benefit-card" data-aos="fade-up">
+            <div class="benefit-card">
                 <div class="card-icon">
-                    <i class="fa-solid fa-stethoscope"></i>
+                    <i class="fa-solid fa-shield-check"></i>
                 </div>
-                <h3>Diagnósticos profesionales</h3>
-                <p>Herramientas de última generación para precisión absoluta.</p>
+                <h3>Garantía Total</h3>
+                <p>Respaldamos todos nuestros servicios. Reparaciones que duran. Confianza 100% garantizada.</p>
             </div>
-            <div class="benefit-card" data-aos="fade-up">
+            <div class="benefit-card">
                 <div class="card-icon">
-                    <i class="fa-solid fa-map-location-dot"></i>
+                    <i class="fa-solid fa-certificate"></i>
                 </div>
-                <h3>Seguimiento del servicio</h3>
-                <p>Mantente informado sobre el estado de tu equipo en tiempo real.</p>
+                <h3>Técnicos Certificados</h3>
+                <p>Profesionales con certificaciones internacionales. Entrenamiento continuo. Experiencia demostrada.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3>Seguridad de Datos</h3>
+                <p>Tu privacidad es prioritaria. Protocolos de seguridad avanzados. Confidencialidad 100% garantizada.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h3>Confianza Verificada</h3>
+                <p>Más de 50 clientes satisfechos. Reviews y testimonios reales. Confianza que se demuestra.</p>
             </div>
         </div>
     </section>
 
     <!-- Estadísticas -->
     <section id="estadisticas" class="estadisticas-section">
+        <div class="section-header">
+            <h2 class="section-title">Nuestros Logros</h2>
+            <p class="section-subtitle">Números que hablan por nosotros</p>
+        </div>
         <div class="stats-container">
-            <div class="stat-box" data-aos="fade-up">
-                <div class="stat-number">+<span class="counter" data-target="500">0</span></div>
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="stat-number">+<span class="counter" data-target="50">0</span></div>
                 <div class="stat-text">Clientes Satisfechos</div>
+                <div class="stat-description">Personas que confían en nosotros</div>
             </div>
-            <div class="stat-box" data-aos="fade-up">
-                <div class="stat-number">+<span class="counter" data-target="1200">0</span></div>
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+                <div class="stat-number">+<span class="counter" data-target="67">0</span></div>
                 <div class="stat-text">Servicios Realizados</div>
+                <div class="stat-description">Reparaciones exitosas completadas</div>
             </div>
-            <div class="stat-box" data-aos="fade-up">
-                <div class="stat-number">+<span class="counter" data-target="3">0</span></div>
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+                <div class="stat-number"><span class="counter" data-target="2">0</span></div>
                 <div class="stat-text">Años de Experiencia</div>
+                <div class="stat-description">Trayectoria en el sector</div>
             </div>
-            <div class="stat-box" data-aos="fade-up">
-                <div class="stat-number"><span class="counter" data-target="98">0</span>%</div>
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="stat-number"><span class="counter" data-target="95">0</span>%</div>
                 <div class="stat-text">Índice de Satisfacción</div>
+                <div class="stat-description">Clientes completamente satisfechos</div>
             </div>
         </div>
     </section>
@@ -187,30 +391,60 @@
     <!-- Gerente -->
     <section id="gerente" class="gerente-section">
         <h2 class="section-title">Dirección General</h2>
-        <div class="manager-card" data-aos="fade-up">
-            <div class="manager-photo">
-                <i class="fa-solid fa-user-tie fa-4x" style="color: #fff;"></i>
-            </div>
-            <h3>Sneakrope</h3>
-            <h4>Gerente de Celestian Unlock</h4>
-            <p>Especialista en seguridad móvil, desarrollo de soluciones de software y gestión técnica avanzada. Comprometido con la innovación y la excelencia en el servicio al cliente.</p>
-            <div class="social-links">
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <div class="manager-container">
+            <div class="manager-card">
+                <div class="manager-photo">
+                    <i class="fa-solid fa-user-tie fa-5x" style="color: #fff;"></i>
+                </div>
+                <h3>Steven Hernandez</h3>
+                <h4>Gerente General & Especialista Técnico</h4>
+                <div class="manager-certifications">
+                    <span class="cert">Certificado A+</span>
+                    <span class="cert">Técnico Móvil</span>
+                    <span class="cert">Especialista Hardware</span>
+                </div>
+                <p>Con más de 2 años de experiencia en el sector, Steven es un especialista reconocido en seguridad móvil, desarrollo de soluciones de software y gestión técnica avanzada. Su compromiso es garantizar innovación y excelencia en cada servicio.</p>
+                <div class="manager-skills">
+                    <h5>Especialidades:</h5>
+                    <ul>
+                        <li>Reparación de hardware avanzada</li>
+                        <li>Desbloqueo FRP y bypass profesional</li>
+                        <li>Recuperación de datos segura</li>
+                        <li>Optimización de sistemas móviles</li>
+                        <li>Atención al cliente premium</li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/stevenhernandez" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/celestianunlock" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/50495823258" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contáctanos -->
+    <!-- Contacto -->
     <section id="contacto" class="contacto-section">
-        <h2 class="section-title">Contáctanos</h2>
+        <div class="section-header">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos aquí para ayudarte</p>
+        </div>
         <div class="contact-grid">
-            <div class="contact-info" data-aos="fade-up">
+            <div class="contact-info">
                 <div class="info-item">
                     <i class="fa-brands fa-whatsapp"></i>
                     <div>
-                        <h4>WhatsApp</h4>
+                        <h4>WhatsApp Directo</h4>
                         <p><a href="https://wa.me/50495823258" target="_blank">+504 9582-3258</a></p>
+                        <span class="contact-note">Respuesta inmediata</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <h4>Instagram</h4>
+                        <p><a href="https://www.instagram.com/celestianunlock" target="_blank">@celestianunlock</a></p>
+                        <span class="contact-note">Síguenos para novedades</span>
                     </div>
                 </div>
                 <div class="info-item">
@@ -218,6 +452,7 @@
                     <div>
                         <h4>Correo Electrónico</h4>
                         <p><a href="mailto:celestianunlock@gmail.com">celestianunlock@gmail.com</a></p>
+                        <span class="contact-note">Respuesta en 24 horas</span>
                     </div>
                 </div>
                 <div class="info-item">
@@ -225,27 +460,55 @@
                     <div>
                         <h4>Ubicación</h4>
                         <p>Atención remota y envíos nacionales</p>
+                        <span class="contact-note">Cobertura nacional</span>
                     </div>
                 </div>
             </div>
-            <div class="contact-map" data-aos="fade-up">
-                <!-- Mapa Opcional embebido de Google Maps -->
+            <div class="contact-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15443.619080708688!2d-87.2045!3d14.0818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDA0JzU0LjUiTiA4N8KwMTInMTYuMiJX!5e0!3m2!1ses!2shn!4v1620000000000!5m2!1ses!2shn" width="100%" height="100%" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Flotante -->
-    <a href="https://wa.me/50495823258" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- Botones Flotantes -->
+    <div class="contact-buttons-float">
+        <a href="https://wa.me/50495823258" class="float-button whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/celestianunlock" class="float-button instagram-float" target="_blank" aria-label="Seguir en Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Celestian Unlock. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Celestian Unlock</h4>
+                <p>Servicios profesionales de reparación, bypass y optimización de dispositivos móviles con garantía total.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#diagnostico">Diagnóstico</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links-footer">
+                    <a href="https://www.instagram.com/celestianunlock" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/50495823258" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Celestian Unlock. Todos los derechos reservados. | Servicio profesional garantizado.</p>
+        </div>
     </footer>
 
-    <!-- Scripts de Partículas y Lógica -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
