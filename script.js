@@ -1,4 +1,4 @@
-// ================= 1. CONFIGURACIÓN DE PARTÍCULAS (Fondo Futurista) =================
+// ================= 1. CONFIGURACIÓN DE PARTÍCULAS =================
 document.addEventListener("DOMContentLoaded", function() {
     if (window.particlesJS) {
         particlesJS("particles-js", {
@@ -47,13 +47,11 @@ const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Alternar menú cuando se hace clic en el botón
 mobileMenu.addEventListener('click', function() {
     this.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
 
-// Cerrar menú cuando se hace clic en un enlace
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
         mobileMenu.classList.remove('active');
@@ -61,7 +59,6 @@ navLinks.forEach(link => {
     });
 });
 
-// Cerrar menú cuando se hace scroll
 window.addEventListener('scroll', function() {
     if (navMenu.classList.contains('active')) {
         mobileMenu.classList.remove('active');
@@ -71,7 +68,6 @@ window.addEventListener('scroll', function() {
 
 // ================= 3. EFECTOS DE NAVEGACIÓN EN SCROLL =================
 const navbar = document.getElementById('navbar');
-let lastScrollTop = 0;
 
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -83,11 +79,9 @@ window.addEventListener('scroll', function() {
         navbar.style.background = 'rgba(5, 0, 15, 0.85)';
         navbar.style.boxShadow = 'none';
     }
-    
-    lastScrollTop = scrollTop;
 });
 
-// ================= 4. ANIMACIÓN DE CONTADORES (Estadísticas) =================
+// ================= 4. ANIMACIÓN DE CONTADORES =================
 const counters = document.querySelectorAll('.counter');
 const speed = 100;
 
@@ -128,7 +122,7 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// ================= 5. ANIMACIONES DE ENTRADA (Fade In) =================
+// ================= 5. ANIMACIONES DE ENTRADA =================
 const observerAnim = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -142,8 +136,7 @@ const observerAnim = new IntersectionObserver((entries) => {
     rootMargin: '0px 0px -50px 0px'
 });
 
-// Aplicar animación a tarjetas
-const cards = document.querySelectorAll('.service-card, .benefit-card, .stat-box, .manager-card, .info-item, .contact-map');
+const cards = document.querySelectorAll('.service-card-advanced, .benefit-card, .stat-box, .manager-card, .info-item, .contact-map');
 cards.forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
@@ -151,7 +144,36 @@ cards.forEach(card => {
     observerAnim.observe(card);
 });
 
-// ================= 6. EFECTO PARALLAX EN HERO =================
+// ================= 6. FILTRO DE GALERÍA =================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galeriaItems = document.querySelectorAll('.galeria-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        // Remover clase active de todos los botones
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Agregar active al botón clickeado
+        this.classList.add('active');
+
+        const filterValue = this.getAttribute('data-filter');
+
+        // Filtrar items
+        galeriaItems.forEach(item => {
+            const itemFilter = item.getAttribute('data-filter');
+            
+            if (filterValue === 'all' || itemFilter === filterValue) {
+                item.classList.remove('hidden');
+                item.style.display = 'block';
+                item.style.animation = 'fadeInUp 0.5s ease';
+            } else {
+                item.classList.add('hidden');
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+// ================= 7. EFECTO PARALLAX EN HERO =================
 const particlesContainer = document.getElementById('particles-js');
 
 window.addEventListener('mousemove', (e) => {
@@ -162,10 +184,9 @@ window.addEventListener('mousemove', (e) => {
     }
 });
 
-// ================= 7. VALIDACIÓN Y ENVÍO DEL FORMULARIO =================
+// ================= 8. VALIDACIÓN Y ENVÍO DEL FORMULARIO =================
 const formDiagnostico = document.getElementById('form-diagnostico');
 
-// Validación en tiempo real
 const inputs = document.querySelectorAll('.input-group input, .input-group textarea');
 inputs.forEach(input => {
     input.addEventListener('blur', function() {
@@ -176,7 +197,6 @@ inputs.forEach(input => {
 formDiagnostico.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Validación básica
     const nombre = document.getElementById('nombre').value.trim();
     const correo = document.getElementById('correo').value.trim();
     const telefono = document.getElementById('telefono').value.trim();
@@ -188,14 +208,12 @@ formDiagnostico.addEventListener('submit', function(e) {
         return;
     }
 
-    // Validar email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(correo)) {
         mostrarNotificacion('Por favor ingresa un correo válido', 'error');
         return;
     }
 
-    // Datos capturados
     const datosCliente = {
         nombre: nombre,
         correo: correo,
@@ -209,18 +227,15 @@ formDiagnostico.addEventListener('submit', function(e) {
     
     mostrarNotificacion('¡Solicitud enviada con éxito! Nos comunicaremos pronto.', 'exito');
     
-    // Resetear formulario
     formDiagnostico.reset();
     
-    // Resetear estilos de inputs
     inputs.forEach(input => {
         input.style.borderBottomColor = 'rgba(255, 255, 255, 0.1)';
     });
 });
 
-// ================= 8. NOTIFICACIONES VISUALES =================
+// ================= 9. NOTIFICACIONES VISUALES =================
 function mostrarNotificacion(mensaje, tipo) {
-    // Crear elemento de notificación
     const notificacion = document.createElement('div');
     notificacion.className = `notificacion notificacion-${tipo}`;
     notificacion.textContent = mensaje;
@@ -241,31 +256,13 @@ function mostrarNotificacion(mensaje, tipo) {
 
     document.body.appendChild(notificacion);
 
-    // Remover notificación después de 4 segundos
     setTimeout(() => {
         notificacion.style.animation = 'slideOutRight 0.3s ease-out forwards';
         setTimeout(() => notificacion.remove(), 300);
     }, 4000);
 }
 
-// ================= 9. EFECTO SCROLL SUAVE CON OBSERVADOR =================
-const sectiones = document.querySelectorAll('section');
-
-sectiones.forEach(section => {
-    const observerSection = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    observerSection.observe(section);
-});
-
-// ================= 10. SMOOTHSCROLL MEJORADO =================
+// ================= 10. SMOOTH SCROLL MEJORADO =================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -299,19 +296,18 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// ================= 12. AGREGAR ANIMACIÓN DE CARGA =================
+// ================= 12. ANIMACIÓN DE CARGA =================
 window.addEventListener('load', function() {
     document.body.style.opacity = '1';
 });
 
-// Inicializar opacidad
 document.body.style.opacity = '0';
 document.body.style.transition = 'opacity 0.5s ease-in';
 window.addEventListener('DOMContentLoaded', function() {
     document.body.style.opacity = '1';
 });
 
-// ================= 13. ESTILO DE NOTIFICACIONES DINÁMICAS =================
+// ================= 13. ESTILOS DINÁMICOS =================
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideInRight {
@@ -346,3 +342,51 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ================= 14. VALIDACIÓN DE TELÉFONO EN TIEMPO REAL =================
+const telefonoInput = document.getElementById('telefono');
+if (telefonoInput) {
+    telefonoInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9-+ ]/g, '');
+    });
+}
+
+// ================= 15. CONTADOR DE CARACTERES PARA TEXTAREA =================
+const problemaTextarea = document.getElementById('problema');
+if (problemaTextarea) {
+    problemaTextarea.addEventListener('input', function() {
+        const maxLength = 500;
+        if (this.value.length > maxLength) {
+            this.value = this.value.substring(0, maxLength);
+        }
+    });
+}
+
+// ================= 16. EFECTO DE TYPING EN TÍTULOS (Opcional) =================
+function typeEffect(element, text, speed = 50) {
+    let index = 0;
+    element.textContent = '';
+    
+    const typeInterval = setInterval(() => {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+        } else {
+            clearInterval(typeInterval);
+        }
+    }, speed);
+}
+
+// Observar cuando los servicios entren en vista
+const serviciosSection = document.getElementById('servicios');
+if (serviciosSection) {
+    const observerServicios = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Podrías agregar efectos aquí si deseas
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    observerServicios.observe(serviciosSection);
+}
